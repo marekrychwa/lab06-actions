@@ -1,4 +1,4 @@
-name: Run Python Script
+name: Run Python Script with ENV
 on: workflow_dispatch
 
 jobs:
@@ -6,5 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Python script
+      - name: Run Python script with environment variable
+        env:
+          IMIE: "Marek"   # tutaj możesz wpisać swoje imię
         run: python3 script.py
